@@ -49,15 +49,16 @@ fun MyBarChartParent() {
 @Composable
 fun MyLineChartParent() {
     LineChart(
-        lineChartData = LineChartData(points = listOf(LineChartData.Point(1f,"Label 1"), ...)),
-        // Optional properties.
-        modifier = Modifier.fillMaxSize(),
-        animation = simpleChartAnimation(),
-        pointDrawer = FilledCircularPointDrawer(),
-        lineDrawer = SolidLineDrawer(),
-        xAxisDrawer = SimpleXAxisDrawer(),
-        yAxisDrawer = SimpleYAxisDrawer(),
-        horizontalOffset = 5f
+        linesChartData = listOf(LineChartData(points = listOf(LineChartData.Point(1f,"Label 1"), ...))),
+    // Optional properties.
+    modifier = Modifier.fillMaxSize(),
+    animation = simpleChartAnimation(),
+    pointDrawer = FilledCircularPointDrawer(),
+    lineDrawer = SolidLineDrawer(),
+    xAxisDrawer = SimpleXAxisDrawer(),
+    yAxisDrawer = SimpleYAxisDrawer(),
+    horizontalOffset = 5f,
+    labels= listOf("label 1" ...)
     )
 }
 ```
